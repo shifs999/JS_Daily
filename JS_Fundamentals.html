@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Fundamentals</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+        body {
+            background-color: #121212;
+            color: #00FFCC;
+            font-family: 'Press Start 2P', monospace;
+            padding: 40px;
+            line-height: 1.6;
+            font-size: 12px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        pre {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            white-space: pre-wrap;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+            font-family: 'Inconsolata', monospace; 
+            font-size: 16px;                 
+            line-height: 1.5;
+        }
+        h1 {
+            text-align: center;
+            color: #FFCC00;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Fundamentals</h1>
+    <pre>
+
+<b> * Basic JS functions: </b>
+
+1. parseInt(string, radix)  |  parseInt("A", 16);  // Returns 10 (hexadecimal to decimal), parseFloat() parses a string and returns a floating-point number.
+
+2. ${} is used to evaluate and embed expressions dynamically in template literals. It is used for expression interpolation within template literals. Template literals are strings enclosed by backticks (` `) instead of single quotes (' ') or double quotes (" "). The expression inside the ${} is evaluated, and its result is converted to a string and inserted into the template literal. 
+
+3. slice(optional start, optional end)
+
+4. substr(start, till what length)
+
+5. splice(start, optional delete count, optional items to add) it returns na array containing deleted elements, delete count=0 if we don't want to delete any item.
+
+6. push(put from front), pop(from right), shift(from left), unshift(put at end)
+
+7. indexOf, lastindexOf, str.replace(a1, a2), value.split(delimiter) gives an array
+
+8. arr1.concat(arr2) is used to merge two or more arrays, or values, into a new array. The original arrays are not modified.
+
+9. arr1.forEach(callbackFn, optional thisArg) expects synchronous function and calls this function once for each element in an array in ascending index order.
+
+10. Var is global and can be re-assigned, let is local and can be re-assigned, const is local and is fixed.
+
+11. Internal linking is basically extraction of output from html file itself, while external linking is extraction of code from separate Js files (linked through src in html file).
+
+12. Time functions .getDate(), .getMonth(), .getFullYear(), .getHours/Minutes/Seconds() similarly set functions are used.
+
+
+<b>* Key Notes: </b>
+
+13. The 'new' operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
+
+14. JavaScript 'Date' objects represent a single moment in time in a platform-independent format. Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the epoch).
+
+15. setInterval(func, delay) method repeatedly calls a function or executes a code snippet, with a fixed time delay b/w each call.
+
+16. The global setTimeout(functionRef, delay) method sets a timer which executes a function or specified piece of code once the timer expires.
+
+17. JSON.parse() static method parses a JSON string, constructing the JS value/object described by the string. JSON.stringify() static method converts a JS value/object to a JSON string. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" style="color:yellow;">MDN JSON Docs</a>
+
+18. In Js even if the callback is resolved and ready with its return value but our thread is busy somewhere the control will not reach the callback(as it is sent to callback queue). Only when the thread is ideal, the event loop runs and the control will reach out to address pending callbacks by placing them in call stack.
+
+19. 'Promise' in Js are just syntactical sugar that still uses callbacks under the hood but it helps to get rid of callbacks syntactically in asynchronous code.
+
+20. Every browser has a Js engine inside it so that Js code can be executed in that browser. NodeJs is a runtime environment of Js, a place where all of our program will be executed having access to file system, databases, and network attached to the server. Culmination of V8 engine and C++, due to which Js code can be executed outside of browser. Node.js has its own APIs, provided by libuv.
+
+21. JS on its own is just a programming language, it has variables, functions, loops, basic objects etc. but it does not have built-in ways to interact with the browser window like handle timers, read/ write files, or make network requests. The runtime environment has some methods built into it and any program executed in that environment has access to these methods.
+
+22. HTTP servers are used to expose some kind of functionality over the internet so that others can access it as well.</pre>
+</body>
+</html>
