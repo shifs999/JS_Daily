@@ -1,6 +1,6 @@
 # :) *JS_Daily -* JS & MERN Daily Uploads 
 
-Welcome to my personal learning repo! This space serves as a structured log of my daily progress in **JS** and **MERN**. I will be uploading a new `.html` or `.txt` file almost **daily** that summarizes what I covered and practiced.
+Welcome to my personal learning repo! This space serves as a structured log of my daily progress in **JS** and **MERN**. I’ll upload a new file, almost daily, outlining what I’ve learned and practiced that day, including code snippets, explanations, and key takeaways.
 
 #### Visit the [link](https://shifs999.github.io/JS_Daily/JS_Fundamentals.html) to cover some fundamentals, the content will be added frequently.
 ---
