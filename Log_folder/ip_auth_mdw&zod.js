@@ -1,4 +1,4 @@
-// Js_002: Cool way of doing input validation using mdw and zod.
+// Js_003: Cool way of doing input validation using mdw and zod.
 
 /* express.json() → its the middleware to parse the request body
 zod → Validation tool to check the request body structure and types
