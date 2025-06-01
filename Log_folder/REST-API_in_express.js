@@ -4,7 +4,8 @@
 
 // Visit  https://blog.postman.com/rest-api-examples/  to know what is REST API and how it works.
 
-// Read the commented as well for better understanding.
+// Read the commented code as well for better understanding.
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -46,7 +47,7 @@ app.get("/api/users", (req, res) =>{    // if  /api/ is used then it should give
 }   Postman API can be used to perform any kind of insertions and tests.*/
 app.post("/api/users", (req, res) =>{
   const body = req.body;
-  users.push({...body, id: users.length + 1});  // here we add our new user entry at the end of the array in MOCK_DATA.json file 
+  users.push({...body, id: users.length + 1});  // here we add our new user entry at the end of the array in MOCK_DATA.json file with a unique id
   // and  ...body is used to copy all the properties of body to the new object
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) =>{
     return res.json({status: "success", id: users.length});
