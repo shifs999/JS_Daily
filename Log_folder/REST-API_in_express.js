@@ -43,7 +43,7 @@ app.get("/api/users", (req, res) =>{    // if  /api/ is used then it should give
   "email": "vicrev123@gmail.com",
   "gender": "Male",
   "job_title": "SDE",
-  "id": 1001
+  "id": 1001 (don't give the id manually it will be handeled logically by handlers and will appear as a unique id in the updated file)
 }   Postman API can be used to perform any kind of insertions and tests.*/
 app.post("/api/users", (req, res) =>{
   const body = req.body;
