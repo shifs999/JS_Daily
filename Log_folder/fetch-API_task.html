@@ -1,0 +1,27 @@
+// Js_005: Lets create a simple HTML page with a button that fetches data from an API and displays it on the page. We will use the fetch() function to make an HTTP GET request to the API and then use the response.json() method to parse the JSON data.
+
+// https://fakerapi.it/api/v1/persons, is a free API, visit it to see the random toy JSON data. We need to hit this API and fetch data from it.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+    async function getUserData() {
+      const response = await fetch("https://fakerapi.it/api/v1/persons");       // fetch() fetches the endpoint on which we want to send our request, here it simply makes an HTTP GET request to https://fakerapi.it/api/v1/persons.
+
+      const finalData = await response.json(); document.getElementById("userData").innerHTML = JSON.stringify(finalData, null, 2)     // finds a specific HTML element and displays the json response inside it as a string
+    }
+  </script>
+  <div id="userData"></div>
+</body>
+<button onclick="getUserData()">Get user data</button>
+
+</html>
