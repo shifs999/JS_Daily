@@ -17,11 +17,12 @@
     async function getUserData() {
       const response = await fetch("https://fakerapi.it/api/v1/persons");       // fetch() fetches the endpoint on which we want to send our request, here it simply makes an HTTP GET request to https://fakerapi.it/api/v1/persons.
 
-      const finalData = await response.json(); document.getElementById("userData").innerHTML = JSON.stringify(finalData, null, 2)     // finds a specific HTML element and displays the json response inside it as a string
+      const finalData = await response.json(); 
+      document.getElementById("userData").innerHTML = JSON.stringify(finalData, null, 2)     // finds a specific HTML element and displays the json response inside it as a string
     }
   </script>
   <div id="userData"></div>
 </body>
-<button onclick="getUserData()">Get user data</button>
+<button onclick="getUserData()">Get user data</button>   
 
 </html>
