@@ -56,7 +56,7 @@ app.post("/api/users", (req, res) =>{
 
 // --> For the above route "/api/user/:id", as they are same in both get and patch methods, we can use a clean code approach as below.
 
-app.route("/api/user/:id").get((req, res) =>{
+app.route("/api/users/:id").get((req, res) =>{
   const id = Number(req.params.id);
   const user = users.find((user) => user.id === id);
   return res.json(user);
