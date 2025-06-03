@@ -78,7 +78,7 @@
 
 18. In Js even if the callback is resolved and ready with its return value but our thread is busy somewhere the control will not reach the callback(as it is sent to callback queue). Only when the thread is ideal, the event loop runs and the control will reach out to address pending callbacks by placing them in call stack.
 
-19. 'Promise' in Js are just syntactical sugar that still uses callbacks under the hood but it helps to get rid of callbacks syntactically in asynchronous code.
+19. 'Promises' in Js are just syntactical sugar that still uses callbacks under the hood but it helps to get rid of callbacks syntactically in asynchronous code.
 
 20. Every browser has a Js engine inside it so that Js code can be executed in that browser. NodeJs is a runtime environment of Js, a place where all of our program will be executed having access to file system, databases, and network attached to the server. Culmination of V8 engine and C++, due to which Js code can be executed outside of browser. Node.js has its own APIs, provided by libuv.
 
@@ -95,6 +95,8 @@ Eg.2  http://images.example.com/photo.jpg: This URL points to the image file pho
 Eg.3  https://blog.example.com/post/article1?author=john&date=2025-05-31#section2: This URL points to a specific blog post, article1, within the blog subdomain of example.com, and includes parameters like author=john and date=2025-05-31, and a fragment section2, all using the HTTPS protocol. 
 For a more detailed explanation visit:  <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL" target="_blank" style="color:yellow;">MDN URLs Doc</a>
     
-24. In const app = express(); app is an instance of express and will act as our handler function, it represents our HTTP server logic, just like what http.createServer((req, res)=>{...}); represents. In app.METHOD(path, handler), handler is the function executed when the route is matched.</pre>
+24. In const app = express(); app is an instance of express and will act as our handler function, it represents our HTTP server logic, just like what http.createServer((req, res)=>{...}); represents. In app.METHOD(path, handler), handler is the function executed when the route is matched.
+
+25. We use JWT tokens so that once the user is authenticated we use the token to confirm the identity in all future requests without needing the user to enter password again for every other route. Every time a user signs in, a new JWT token is generated to represent a fresh authenticated session. JWTs are stateless(thus no need to store app sessions in memory) and self-contained, the token itself serves as proof of authentication and includes metadata like the issued time and expiration. Generating a new token each time helps ensure that sessions remain secure and that the token's expiry (e.g., 1 hour from login) is always current. This approach also prevents misuse of old or previously leaked tokens.</pre>
 </body>
 </html>
