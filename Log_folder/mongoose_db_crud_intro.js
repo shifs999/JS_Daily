@@ -2,6 +2,8 @@
 
 // Please go through Js_004 for references and better understanding. Last time in Js_004 we used a MOCK_DATA.json file for simplicity, but this time we will perform the opertions on a DB.
 
+// Visit  https://www.mongodb.com/resources/products/fundamentals/basics  and  https://mongoosejs.com/docs/  to learn about MongoDB and Mongoose.
+
 const express = require("express");
 const app = express();
 const port = 3000;
