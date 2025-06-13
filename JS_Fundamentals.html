@@ -101,6 +101,15 @@ For a more detailed explanation visit:  <a href="https://developer.mozilla.org/e
     
 26. Clusters of Node.js processes can be used to run multiple instances of Node.js that can distribute workloads among their application threads. 
 * Problem: Node.js runs on a single thread, meaning it can only use one CPU core at a time. This can be a bottleneck if your server receives many requests.
-* Solution: The cluster module lets you create "worker" processes that run concurrently. Each worker is a separate instance of your application, and they all share the same server port. This distributes the load across multiple CPU cores, improving performance and scalability. When process isolation is not needed, use the worker_threads module instead, which allows running multiple application threads within a single Node.js instance. <a href = "https://nodejs.org/api/cluster.html#cluster" target="_blank" style="color:yellow;">Clusters Doc</a> </pre>
+* Solution: The cluster module lets you create "worker" processes that run concurrently. Each worker is a separate instance of your application, and they all share the same server port. This distributes the load across multiple CPU cores, improving performance and scalability. When process isolation is not needed, use the worker_threads module instead, which allows running multiple application threads within a single Node.js instance. <a href = "https://nodejs.org/api/cluster.html#cluster" target="_blank" style="color:yellow;">Clusters Doc</a>
+    
+27. We use encodeURI() function to encode a URL. This function requires a URL string as a parameter and it returns that encoded string. Opposingly, decodeURI() function is used to decode a URL. This function requires an encoded URL string as parameter and return that decoded string.
+    Note: If you want to encode characters such as / ? : @ & = + $ # then you need to use encodeURIComponent().
+    <code>
+    let uri = "employeeDetails?name=john&occupation=manager";
+    let encoded_uri = encodeURI(uri);
+    let decoded_uri = decodeURI(encoded_uri);
+    </code>
+    </pre>
 </body>
 </html>
