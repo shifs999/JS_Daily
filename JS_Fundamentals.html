@@ -109,6 +109,22 @@ Eg:-
 let uri = "employeeDetails?name=john&occupation=manager";
 let encoded_uri = encodeURI(uri);
 let decoded_uri = decodeURI(encoded_uri);
+
+28. Server-sent events (SSE) is a server push technology enabling a browser to receive automatic updates from a server via HTTP connection without resorting to polling. These are a one way communications channel - events flow from server to client only. This has been used in Facebook/Twitter/X updates, stock price updates, news feeds etc. 
+The EventSource object is used to receive server-sent event notifications. For example, one can receive messages from server as below:
+if (typeof EventSource !== "undefined") {
+  var source = new EventSource("sse_generator.js");
+  source.onmessage = function (event) {
+    document.getElementById("output").innerHTML += event.data + "<br>";
+  };
+}
+        
+We can perform browser support for server-sent events before using it as below:
+if (typeof EventSource !== "undefined") {
+  // Server-sent events supported. Can have some code here!
+} else {
+  // No server-sent events supported
+}
 </pre>
 </body>
 </html>
