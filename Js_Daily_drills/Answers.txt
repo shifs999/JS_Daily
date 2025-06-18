@@ -1,0 +1,5 @@
+# Answers to the questions in Questions.txt file in respective order
+
+A.1) 3 3 3 and 0 1 2
+
+A.2) True False False
