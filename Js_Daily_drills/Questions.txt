@@ -1,0 +1,22 @@
+# Solving these drill questions will brush up the fundamentals. Questions will be added frequently with answers to respective questions in the Answers.txt file
+
+```Q1: What is the Output for the code below ?
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1);
+}
+
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1);
+} ```
+
+
+```Q2: State True/False for each
+let a = 3;
+let b = new Number(3);
+let c = 3;
+
+1) console.log(a == b);       True/False ?
+2) console.log(a === b);      True/False ?
+3) console.log(b === c);      True/False ?
+```
