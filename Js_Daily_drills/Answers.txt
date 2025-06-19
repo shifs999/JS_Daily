@@ -1,5 +1,14 @@
 # Answers to the questions in Questions.txt file in respective order
 
-A.1) 3 3 3 and 0 1 2
+A1: 3 3 3 and 0 1 2
 
-A.2) True False False
+A2: True False False
+
+A3: TypeError
+In JS, functions are objects, and therefore, the method getFullName gets added to the constructor function object itself. For that reason, we can call Person.getFullName(), but member.getFullName throws a TypeError. If we want a method to be available to all object instances, we have to add it to the prototype property:
+Person.prototype.getFullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+};
+
+A4: ["", " is ", " years old"] "John" 21
+If we use tagged template literals, the value of the first argument is always an array of the string values. The remaining arguments get the values of the passed expressions!
