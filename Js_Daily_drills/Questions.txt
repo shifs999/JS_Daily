@@ -12,6 +12,7 @@ for (let i = 0; i < 3; i++) {
 
 
 ```Q2: State True/False for each
+
 let a = 3;
 let b = new Number(3);
 let c = 3;
@@ -19,4 +20,31 @@ let c = 3;
 1) console.log(a == b);       True/False ?
 2) console.log(a === b);      True/False ?
 3) console.log(b === c);      True/False ?
+
+Q3: What is the Output for the code below ?
+
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+const member = new Person('John', 'Doe');
+Person.getFullName = function() {
+  return `${this.firstName} ${this.lastName}`;
+};
+console.log(member.getFullName());
+
+Q4: What is the Output of the code below ?
+
+function getPersonInfo(one, two, three) {
+  console.log(one);
+  console.log(two);
+  console.log(three);
+}
+
+const person = 'John';
+const age = 21;
+
+getPersonInfo`${person} is ${age} years old`;
+
 ```
