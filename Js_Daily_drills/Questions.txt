@@ -8,10 +8,10 @@ for (var i = 0; i < 3; i++) {
 
 for (let i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 1);
-} ```
+} 
 
 
-```Q2: State True/False for each
+Q2: State True/False for each
 
 let a = 3;
 let b = new Number(3);
@@ -20,6 +20,7 @@ let c = 3;
 1) console.log(a == b);       True/False ?
 2) console.log(a === b);      True/False ?
 3) console.log(b === c);      True/False ?
+
 
 Q3: What is the Output for the code below ?
 
@@ -34,6 +35,7 @@ Person.getFullName = function() {
 };
 console.log(member.getFullName());
 
+
 Q4: What is the Output of the code below ?
 
 function getPersonInfo(one, two, three) {
@@ -46,5 +48,30 @@ const person = 'John';
 const age = 21;
 
 getPersonInfo`${person} is ${age} years old`;
+
+
+Q5: What is the Output of the code below ?
+
+function checkAge(data) {
+  if (data === { age: 18 }) {
+    console.log('You are an adult');
+  } else if (data == { age: 18 }) {
+    console.log('You are still an adult');
+  } else {
+    console.log(`Grow up`);
+  }
+}
+checkAge({ age: 18 });
+
+
+Q6: What is the Output of the code below ?
+
+const foo = () => console.log('First');
+const bam = () => setTimeout(() => console.log('Second'));
+const buzz = () => console.log('Third');
+
+bam();
+foo();
+buzz();
 
 ```
