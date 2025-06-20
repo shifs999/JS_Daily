@@ -12,3 +12,9 @@ Person.prototype.getFullName = function() {
 
 A4: ["", " is ", " years old"] "John" 21
 If we use tagged template literals, the value of the first argument is always an array of the string values. The remaining arguments get the values of the passed expressions!
+
+A5: Grow up
+When testing equality, primitives are compared by their value, while objects are compared by their reference. JavaScript checks if the objects have a reference to the same location in memory. Loose equality does type coercion, but not for objects to objects, it still checks references.
+
+A6: First Third Second  
+Checkout how event loop and setTimeout() works in JS here: "https://github.com/shifs999/JS_Daily/blob/main/Extra_Files/What%20the%20heck%20is%20the%20event%20loop%20anyway%20yt_link.txt"
