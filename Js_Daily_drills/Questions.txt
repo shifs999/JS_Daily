@@ -1,6 +1,7 @@
 # Solving these drill questions will brush up the fundamentals. Questions will be added frequently with answers to respective questions in the Answers.txt file
 
-```Q1: What is the Output for the code below ?
+```
+Q1: What is the Output for the code below ?
 
 for (var i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 1);
@@ -73,5 +74,27 @@ const buzz = () => console.log('Third');
 bam();
 foo();
 buzz();
+
+
+Q7: What will it return ?
+
+const firstPromise = new Promise((res, rej) => {
+  setTimeout(res, 500, 'one');
+});
+
+const secondPromise = new Promise((res, rej) => {
+  setTimeout(res, 100, 'two');
+});
+
+Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+
+
+Q8: What is the Output of the code below ?
+
+function getItems(fruitList, ...args, favoriteFruit) {
+  return [...fruitList, ...args, favoriteFruit]
+}
+
+getItems(["banana", "apple"], "pear", "orange")
 
 ```
