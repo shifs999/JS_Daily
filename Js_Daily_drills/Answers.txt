@@ -1,5 +1,6 @@
 # Answers to the questions in Questions.txt file in respective order
 
+```
 A1: 3 3 3 and 0 1 2
 
 A2: True False False
@@ -18,3 +19,16 @@ When testing equality, primitives are compared by their value, while objects are
 
 A6: First Third Second  
 Checkout how event loop and setTimeout() works in JS here: "https://github.com/shifs999/JS_Daily/blob/main/Extra_Files/What%20the%20heck%20is%20the%20event%20loop%20anyway%20yt_link.txt"
+
+A7: "two"
+When we pass multiple promises to the Promise.race method, it resolves/rejects the first promise that resolves/rejects. To the setTimeout method, we pass a timer: 500ms for the first promise (firstPromise), and 100ms for the second promise (secondPromise). This means that the secondPromise resolves first with the value of 'two'. res now holds the value of 'two', which gets logged.
+
+A8: SyntaxError
+...args is a rest parameter. The rest parameter's value is an array containing all remaining arguments, and can only be the last parameter! In this example, the rest parameter was the second parameter. This is not possible, and will throw a syntax error.
+
+function getItems(fruitList, favoriteFruit, ...args) {
+  return [...fruitList, ...args, favoriteFruit];
+}
+
+getItems(['banana', 'apple'], 'pear', 'orange');      //  This returns the array [ 'banana', 'apple', 'orange', 'pear' ]
+```
