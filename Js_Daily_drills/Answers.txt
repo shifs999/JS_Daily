@@ -31,4 +31,12 @@ function getItems(fruitList, favoriteFruit, ...args) {
 }
 
 getItems(['banana', 'apple'], 'pear', 'orange');      //  This returns the array [ 'banana', 'apple', 'orange', 'pear' ]
+
+A9: TypeError 
+In JavaScript, we have two ways to access properties on an object: bracket notation, or dot notation. In this example, we use dot notation (colorConfig.colors) instead of bracket notation (colorConfig["colors"]).
+With dot notation, JavaScript tries to find the property on the object with that exact name. In this example, JavaScript tries to find a property called colors on the colorConfig object. There is no property called colors, so this returns undefined. Then, we try to access the value of the first element by using [1]. We cannot do this on a value that's undefined, so it throws a TypeError: Cannot read property '1' of undefined.
+
+A10: 1 2 3
+The generator function range returns an async object with promises for each item in the range we pass: Promise{1}, Promise{2}, Promise{3}. We set the variable gen equal to the async object, after which we loop over it using a for await ... of loop. We set the variable item equal to the returned Promise values: first Promise{1}, then Promise{2}, then Promise{3}. Since we're awaiting the value of item, the resolved promise, the resolved values of the promises get returned: 1, 2, then 3.
+
 ```
