@@ -97,4 +97,34 @@ function getItems(fruitList, ...args, favoriteFruit) {
 
 getItems(["banana", "apple"], "pear", "orange")
 
+
+Q9: What will be the Output?
+
+const colorConfig = {
+  red: true,
+  blue: false,
+  green: true,
+  black: true,
+  yellow: false,
+};
+
+const colors = ['pink', 'red', 'blue'];
+console.log(colorConfig.colors[1]);
+
+
+Q10: What will be the Output?
+
+async function* range(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield Promise.resolve(i);
+  }
+}
+
+(async () => {
+  const gen = range(1, 3);
+  for await (const item of gen) {
+    console.log(item);
+  }
+})();
+
 ```
