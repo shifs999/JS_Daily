@@ -53,4 +53,10 @@ With the Intl.NumberFormat method, we can format numeric values to any locale. W
 A14: 'Third'
 The Promise.all method runs the passed promises in parallel. If one promise fails, the Promise.all method rejects with the value of the rejected promise. In this case, promise3 is rejected with the value "Third". We’re catching the rejected value in the chained catch method on the runPromises invocation to catch any errors within the runPromises function. Only "Third" gets logged, since promise3 is rejected with this value.
 
+A15: true
+The updateUser function updates the values of the email and password properties on user, if their values are passed to the function, after which the function returns the user object. The returned value of the updateUser function is the user object, which means that the value of updatedUser is a reference to the same user object that user points to. updatedUser === user equals true.
+
+A16: { email: "my@email.com", address: {} }
+The default value of address is an empty object {}. When we set the variable member equal to the object returned by the createMember function, we didn't pass a value for the address, which means that the value of the address is the default empty object {}. An empty object is a truthy value, which means that the condition of the address ? address : null conditional returns true. The value of the address is the empty object {}.
+
 ```
