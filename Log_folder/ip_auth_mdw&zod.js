@@ -1,7 +1,7 @@
 // Js_003: Cool way of doing input validation using mdw and zod.
 
-/* express.json() → its the middleware to parse the request body
-zod → Validation tool to check the request body structure and types
+/* express.json() -> its the middleware to parse the request body
+zod -> provides a declarative and intuitive syntax for defining schemas that describe the shape and constraints of data. Its like a validation tool to check the request body structure and types
 They work together:
 1. Middleware makes the data available
 2. Zod ensures the data is valid, Zod itself is not a middleware. 
