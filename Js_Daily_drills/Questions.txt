@@ -239,4 +239,27 @@ const createMember = ({ email, address = {}}) => {
 const member = createMember({ email: "my@email.com" })
 console.log(member)
 
+
+Q17: What will be the Output?
+
+let randomValue = { name: "Roy" }
+randomValue = 20
+
+if (!typeof randomValue === "string") {
+	console.log("It's not a string!")
+} else {
+	console.log("Yay it's a string!")
+}
+
+
+Q18: What should be the value of method to log { name: "Roy", age: 20 }?
+
+const keys = ["name", "age"]
+const values = ["Roy", 20]
+
+const method = /* Here ??? */ 
+Object[method](keys.map((_, i) => {
+	return [keys[i], values[i]]
+}))     // { name: "Roy", age: 20 }
+
 ```
