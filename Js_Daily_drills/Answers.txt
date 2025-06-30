@@ -59,4 +59,11 @@ The updateUser function updates the values of the email and password properties 
 A16: { email: "my@email.com", address: {} }
 The default value of address is an empty object {}. When we set the variable member equal to the object returned by the createMember function, we didn't pass a value for the address, which means that the value of the address is the default empty object {}. An empty object is a truthy value, which means that the condition of the address ? address : null conditional returns true. The value of the address is the empty object {}.
 
+A17: Yay it's a string!
+The condition within the if statement checks whether the value of !typeof randomValue is equal to "string". The ! operator converts the value to a boolean value. If the value is truthy, the returned value will be false, if the value is falsy, the returned value will be true. In this case, the returned value of typeof randomValue is the truthy value "number", meaning that the value of !typeof randomValue is the boolean value false.
+!typeof randomValue === "string" always returns false, since we're actually checking false === "string". Since the condition returned false, the code block of the else statement gets run, and Yay it's a string! gets logged.
+
+A18: fromEntries
+The fromEntries method turns a 2d array into an object. The first element in each subarray will be the key, and the second element in each subarray will be the value. In this case, we’re mapping over the keys array, which returns an array that the first element is the item on the key array on the current index, and the second element is the item of the values array on the current index.
+This creates an array of subarrays containing the correct keys and values, which results in { name: "Roy", age: 20 }
 ```
