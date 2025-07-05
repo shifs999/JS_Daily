@@ -106,18 +106,45 @@ For a more detailed explanation visit:  <a href="https://developer.mozilla.org/e
 27. We use encodeURI() function to encode a URL. This function requires a URL string as a parameter and it returns that encoded string. Opposingly, decodeURI() function is used to decode a URL. This function requires an encoded URL string as parameter and return that decoded string.
 Note: If you want to encode characters such as / ? : @ & = + $ # then you need to use encodeURIComponent().
 Eg:-
-let uri = "employeeDetails?name=john&occupation=manager";
-let encoded_uri = encodeURI(uri);
-let decoded_uri = decodeURI(encoded_uri);
+    let uri = "employeeDetails?name=john&occupation=manager";
+    let encoded_uri = encodeURI(uri);
+    let decoded_uri = decodeURI(encoded_uri);
 
 28. Server-sent events (SSE) is a server push technology enabling a browser to receive automatic updates from a server via HTTP connection without resorting to polling. These are a one way communications channel - events flow from server to client only. This has been used in Facebook/Twitter/X updates, stock price updates, news feeds etc. 
         
 We can also perform browser support for server-sent events before using it as below:
-if (typeof EventSource !== "undefined") {
-  // Server-sent events supported. Can have some code here!
-} else {
-  // No server-sent events supported
-}
+    if (typeof EventSource !== "undefined") {
+      // Server-sent events supported. Can have some code here!
+    } else {
+      // No server-sent events supported
+    }
+
+29. Memoization is a functional programming technique which attempts to increase a function’s performance by caching its previously computed results. 
+Each time a memoized function is called, its parameters are used to index the cache. If the data is present, then it can be returned, without executing the entire function. 
+Otherwise the function is executed and then the result is added to the cache. Let's take an example of adding function with memoization
+    
+  const memoizeAddition = () => {
+  let cache = {};
+  return (value) => {
+    if (value in cache) {
+      console.log("Fetching from cache");
+      return cache[value]; // Here, cache.value cannot be used as property name starts with the number which is not a valid JavaScript  identifier. Hence, can only be accessed using the square bracket notation.
+    } else {
+      console.log("Calculating result");
+      let result = value + 20;
+      cache[value] = result;
+      return result;
+    }
+  };
+};
+        
+// returned function from memoizeAddition
+const addition = memoizeAddition();
+console.log(addition(20)); //output: 40 calculated
+console.log(addition(20)); //output: 40 cached
+<a href = "https://www.freecodecamp.org/news/memoization-in-javascript-and-react/" target="_blank" style="color:yellow;">Memoization Fcc</a>
+<a href = "https://dev.to/devsmitra/maximizing-performance-how-to-memoize-async-functions-in-javascript-4on8" target="_blank" style="color:yellow;">Memoization DevCommunity</a>
+        
 </pre>
 </body>
 </html>
