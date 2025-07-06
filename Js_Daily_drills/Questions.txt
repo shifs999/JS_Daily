@@ -262,4 +262,25 @@ Object[method](keys.map((_, i) => {
 	return [keys[i], values[i]]
 }))     // { name: "Roy", age: 20 }
 
+
+Q19: What will be the Output?
+
+const add = () => {
+  const cache = {};
+  return num => {
+    if (num in cache) {
+      return `From cache! ${cache[num]}`;
+    } else {
+      const result = num + 10;
+      cache[num] = result;
+      return `Calculated! ${result}`;
+    }
+  };
+};
+
+const addFunction = add();
+console.log(addFunction(10));
+console.log(addFunction(10));
+console.log(addFunction(5 * 2));
+
 ```
