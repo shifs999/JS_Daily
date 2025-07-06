@@ -66,4 +66,6 @@ The condition within the if statement checks whether the value of !typeof random
 A18: fromEntries
 The fromEntries method turns a 2d array into an object. The first element in each subarray will be the key, and the second element in each subarray will be the value. In this case, we’re mapping over the keys array, which returns an array that the first element is the item on the key array on the current index, and the second element is the item of the values array on the current index.
 This creates an array of subarrays containing the correct keys and values, which results in { name: "Roy", age: 20 }
+
+A19: Calculated! 20  From cache! 20  From cache! 20
 ```
