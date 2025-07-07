@@ -144,7 +144,28 @@ console.log(addition(20)); //output: 40 calculated
 console.log(addition(20)); //output: 40 cached
 <a href = "https://www.freecodecamp.org/news/memoization-in-javascript-and-react/" target="_blank" style="color:yellow;">Memoization Fcc</a>
 <a href = "https://dev.to/devsmitra/maximizing-performance-how-to-memoize-async-functions-in-javascript-4on8" target="_blank" style="color:yellow;">Memoization DevCommunity</a>
-        
+
+30. A higher-order function in JavaScript is a function that can take other functions as arguments or can return functions. This feature enables functional programming paradigms such as map, reduce, and filter. Higher-order functions offer versatility and modularity, fostering streamlined, efficient code.
+Key Characteristics:
+* First-class functions: Functions in JavaScript are considered first-class, meaning they are a legitimate data type and can be treated like any other value, including being assigned to variables, stored in data structures, or returned from other functions.
+* Closure support: Due to closures, a higher-order function can transport not just the enclosed data within the function definition, but also the lexical environment in which that data resides.
+* Dynamic code: Because JavaScript allows functions to be dynamically constructed and named, they can be dynamically passed to higher-order functions.
+    Code Example: Higher-order Functions
+    // Simple higher-order function
+    function multiplier(factor) {
+      return function(num) {
+        return num * factor;
+      };
+    }
+    
+    // Invoke a higher-order function
+    const twice = multiplier(2);
+    console.log(twice(5));  // Output: 10
+    
+    // Functional programming with higher-order functions
+    const numbers = [1, 2, 3, 4, 5];
+    const doubled = numbers.map(multiplier(2));  // [2, 4, 6, 8, 10]
+    const tripled = numbers.map(multiplier(3));  // [3, 6, 9, 12, 15]
 </pre>
 </body>
 </html>
