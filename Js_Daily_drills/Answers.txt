@@ -68,4 +68,6 @@ The fromEntries method turns a 2d array into an object. The first element in eac
 This creates an array of subarrays containing the correct keys and values, which results in { name: "Roy", age: 20 }
 
 A19: Calculated! 20  From cache! 20  From cache! 20
+
+A20: Last line 1!  Promise 2!  Last line 2!  Promise 1!  Timeout 1!  Timeout 2!
 ```
