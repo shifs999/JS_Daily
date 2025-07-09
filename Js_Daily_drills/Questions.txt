@@ -304,4 +304,17 @@ async function funcTwo() {
 funcOne();
 funcTwo();
 
+
+Q21: What will be the Output?
+
+function givemePizza() {
+  return 'Here is pizza!';
+}
+
+const givemeChocolate = () =>
+  "Here's chocolate... now go hit the gym already.";
+
+console.log(givemePizza.prototype);
+console.log(givemeChocolate.prototype);
+
 ```
