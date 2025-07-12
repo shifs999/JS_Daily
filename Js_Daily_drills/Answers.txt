@@ -73,4 +73,8 @@ A20: Last line 1!  Promise 2!  Last line 2!  Promise 1!  Timeout 1!  Timeout 2!
 
 A21: { constructor: ...} undefined
 Regular functions, such as the givemePizza function, have a prototype property, which is an object (prototype object) with a constructor property. Arrow functions however, such as the givemeChocolate function, do not have this prototype property. So, undefined gets returned when trying to access the prototype property using givemeChocolate.prototype.
+
+A22: TypeError
+The colorChange function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children or called upon class instances. Since freddie is an instance of class Chameleon, the function cannot be called upon it. A TypeError is thrown.
+
 ```
