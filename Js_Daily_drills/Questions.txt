@@ -318,7 +318,7 @@ console.log(givemePizza.prototype);
 console.log(givemeChocolate.prototype);
 
 
-Q22:  
+Q22: What will be the Output?
 
 class Chameleon {
   static colorChange(newColor) {
