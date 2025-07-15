@@ -80,4 +80,9 @@ The colorChange function is static. Static methods are designed to live only on 
 A23: 1 undefined 2
 The catch block receives the argument x. This is not the same x as the variable when we pass arguments. This variable x is block-scoped. Later, we set this block-scoped variable equal to 1, and set the value of the variable y. Now, we log the block-scoped variable x, which is equal to 1.
 Outside of the catch block, x is still undefined, and y is 2. When we want to console.log(x) outside of the catch block, it returns undefined, and y returns 2.
+
+A24: 2nd constructor
+In a derived class, you cannot access the this keyword before calling super. If you try to do that, it will throw a ReferenceError: 1 and 4 would throw a reference error.
+With the super keyword, we call that parent class's constructor with the given arguments. The parent's constructor receives the name argument, so we need to pass name to super.
+
 ```
