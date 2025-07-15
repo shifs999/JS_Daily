@@ -349,4 +349,39 @@ Q23: What will be the Output?
   console.log(y);
 })();
 
+
+Q24: With which constructor we can successfully extend the Dog class?
+
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+};
+
+class Husky extends Dog {
+
+  // 1st constructor
+  constructor(name, size) {
+    this.size = size;
+  }
+
+  // 2nd constructor
+  constructor(name, size) {
+    super(name);
+    this.size = size;
+  }
+
+  // 3rd constructor
+  constructor(size) {
+    super(name);
+    this.size = size;
+  }
+
+  // 4th constructor
+  constructor(name, size) {
+    this.name = name;
+    this.size = size;
+  }
+};
+
 ```
