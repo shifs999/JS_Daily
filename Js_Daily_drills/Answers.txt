@@ -85,4 +85,7 @@ A24: 2nd constructor
 In a derived class, you cannot access the this keyword before calling super. If you try to do that, it will throw a ReferenceError: 1 and 4 would throw a reference error.
 With the super keyword, we call that parent class's constructor with the given arguments. The parent's constructor receives the name argument, so we need to pass name to super.
 
+A25: They are the same!
+Objects are passed by reference. When we check objects for strict equality (===), we're comparing their references.
+
 ```
