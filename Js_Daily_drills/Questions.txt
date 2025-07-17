@@ -384,4 +384,17 @@ class Husky extends Dog {
   }
 };
 
+
+Q25: What will be the Output?
+
+function compareMembers(person1, person2 = person) {
+  if (person1 !== person2) {
+    console.log('Not the same!');
+  } else {
+    console.log('They are the same!');
+  }
+}
+const person = { name: 'Roy' };
+compareMembers(person);
+
 ```
