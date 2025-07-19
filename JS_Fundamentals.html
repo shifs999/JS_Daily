@@ -166,6 +166,37 @@ Key Characteristics:
     const numbers = [1, 2, 3, 4, 5];
     const doubled = numbers.map(multiplier(2));  // [2, 4, 6, 8, 10]
     const tripled = numbers.map(multiplier(3));  // [3, 6, 9, 12, 15]
+
+31. Currying is the process of transforming a function with multiple arguments into a sequence of nested functions, each accepting only one argument at a time.
+    * Before Currying (Normal n-ary Function)
+        const multiArgFunction = (a, b, c) => a + b + c;
+        console.log(multiArgFunction(1, 2, 3)); // Output: 6
+
+    * After Currying (Unary Function Chain)
+        const curryUnaryFunction = (a) => (b) => (c) => a + b + c;
+        console.log(curryUnaryFunction(1));       // Returns: function (b) => ...
+        console.log(curryUnaryFunction(1)(2));    // Returns: function (c) => ...
+        console.log(curryUnaryFunction(1)(2)(3)); // Output: 6
+    * Each function in the chain accepts one argument and returns the next function, until all arguments are provided and the final result is computed.
+
+32. A pure function is a function whose output depends only on its input arguments and produces no side effects. This means that given the same inputs, a pure function will always return the same output, and it does not modify any external state or data.
+    Example: Pure vs. Impure Functions
+        // Impure Function
+        let numberArray = [];
+        const impureAddNumber = (number) => numberArray.push(number);
+        
+        // Pure Function
+        const pureAddNumber = (number) => (inputArray) =>
+          inputArray.concat([number]);
+        
+        // Usage
+        console.log(impureAddNumber(6)); // returns 1
+        console.log(numberArray);        // returns [6]
+        
+        console.log(pureAddNumber(7)(numberArray)); // returns [6, 7]
+        console.log(numberArray);                   // remains [6]
+        
+   * impureAddNumber changes the external variable numberArray and returns the new length of the array, making it impure, whereas pureAddNumber creates a new array with the added number and does not modify the original array, making it pure.
 </pre>
 </body>
 </html>
