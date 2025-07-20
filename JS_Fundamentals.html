@@ -97,8 +97,23 @@ For a more detailed explanation visit:  <a href="https://developer.mozilla.org/e
     
 24. In const app = express(); app is an instance of express and will act as our handler function, it represents our HTTP server logic, just like what http.createServer((req, res)=>{...}); represents. In app.METHOD(path, handler), handler is the function executed when the route is matched.
 
-25. We use JWT tokens so that once the user is authenticated we use the token to confirm the identity in all future requests without needing the user to enter password again for every other route. Every time a user signs in, a new JWT token is generated to represent a fresh authenticated session. JWTs are stateless(thus no need to store app sessions in memory) and self-contained, the token itself serves as proof of authentication and includes metadata like the issued time and expiration. Generating a new token each time helps ensure that sessions remain secure and that the token's expiry (e.g., 1 hour from login) is always current. This approach also prevents misuse of old or previously leaked tokens.
-    
+25. We use JWT tokens so that once the user is authenticated we use the token to confirm the identity in all future requests without needing the user to enter password again for every other route. Every time a user manually signs in, a completely new JWT token is generated to represent a fresh authenticated session. 
+JWTs are stateless(thus no need to store app sessions in memory) and self-contained, the token itself serves as proof of authentication and includes metadata like the issued time and expiration. This approach also prevents misuse of old or previously leaked tokens.
+JWTs enable stateless authentication by embedding user information (like ID, role, and permissions) directly within a self-contained token issued after successful login (e.g., verifying username/password). This token, structured as `Header.Payload.Signature` (each Base64Url-encoded), includes critical metadata like the issuing algorithm (alg) in the header and user claims (sub, role) plus timestamps (iat, exp) in the payload. The server signs the token (e.g., using HMAC-SHA256 with a secret key) to create the signature, ensuring integrity. 
+The client stores this JWT securely (e.g., in local storage) and includes it in subsequent requests (typically as a `Bearer` token in the Authorization header). The server verifies requests statelessly by checking the signature against its secret key to confirm the token hasn't been tampered with and validating the expiration time (`exp`). If valid, the server grants access based on the claims within the token itself, eliminating the need for session storage.
+
+JWT structure, payload details, and security mechanism:-
+        
+* <b>Header:</b> Specifies token type (JWT) and signing algorithm (e.g., HS256).
+
+* <b>Payload:</b> Contains user claims like subject (sub), name, role (e.g., {"sub":"1234567890","name":"Alice","admin":true}), and critical timestamps:-
+iat (Issued At): Token creation time (e.g., 1716239022 = May 21, 2024, 12:43:42 UTC).
+exp (Expiration): Token expiry time (e.g., 1716242622 = May 21, 2024, 13:43:42 UTC - 1 hour later).
+
+* <b>Signature:</b> Generated via HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), secret_key). This cryptographic seal prevents tampering by ensuring the header and payload haven't been altered after issuance.
+
+The client stores this token (e.g., "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0...SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c") securely and sends it with subsequent requests. The server verifies it statelessly by checking the signature against its secret key to validate integrity and confirming the token hasn't expired (exp). After the verification, finally access is granted
+
 26. Clusters of Node.js processes can be used to run multiple instances of Node.js that can distribute workloads among their application threads. 
 * Problem: Node.js runs on a single thread, meaning it can only use one CPU core at a time. This can be a bottleneck if your server receives many requests.
 * Solution: The cluster module lets you create "worker" processes that run concurrently. Each worker is a separate instance of your application, and they all share the same server port. This distributes the load across multiple CPU cores, improving performance and scalability. When process isolation is not needed, use the worker_threads module instead, which allows running multiple application threads within a single Node.js instance. <a href = "https://nodejs.org/api/cluster.html#cluster" target="_blank" style="color:yellow;">Clusters Doc</a>
