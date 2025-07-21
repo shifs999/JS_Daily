@@ -212,6 +212,42 @@ Key Characteristics:
         console.log(numberArray);                   // remains [6]
         
    * impureAddNumber changes the external variable numberArray and returns the new length of the array, making it impure, whereas pureAddNumber creates a new array with the added number and does not modify the original array, making it pure.
+
+33. Prototypical inheritance in JavaScript is a way for objects to inherit properties and methods from other objects. Every JavaScript object has a special hidden property called [[Prototype]] (commonly accessed via __proto__ or using Object.getPrototypeOf()) that is a reference to another object, which is called the object's "prototype".
+When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's __proto__, and the __proto__'s __proto__ and so on, until it finds the property defined on one of the __proto__s or until it reaches the end of the prototype chain.
+    
+Here's an example of prototypal inheritance:
+
+// Parent object constructor.
+function Animal(name) {
+  this.name = name;
+}
+
+// Add a method to the parent object's prototype.
+Animal.prototype.makeSound = function () {
+  console.log('The ' + this.constructor.name + ' makes a sound.');
+};
+
+// Child object constructor.
+function Dog(name) {
+  Animal.call(this, name); // Call the parent constructor.
+}
+
+// Set the child object's prototype to be the parent's prototype.
+Object.setPrototypeOf(Dog.prototype, Animal.prototype);
+
+// Add a method to the child object's prototype.
+Dog.prototype.bark = function () {
+  console.log('Woof!');
+};
+
+// Create a new instance of Dog.
+const bolt = new Dog('Bolt');
+
+// Call methods on the child object.
+console.log(bolt.name); // "Bolt"
+bolt.makeSound(); // "The Dog makes a sound."
+bolt.bark(); // "Woof!"
 </pre>
 </body>
 </html>
