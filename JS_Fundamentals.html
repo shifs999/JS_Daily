@@ -79,6 +79,18 @@
 18. In Js even if the callback is resolved and ready with its return value but our thread is busy somewhere the control will not reach the callback(as it is sent to callback queue). Only when the thread is ideal, the event loop runs and the control will reach out to address pending callbacks by placing them in call stack.
 
 19. 'Promises' in Js are just syntactical sugar that still uses callbacks under the hood but it helps to get rid of callbacks syntactically in asynchronous code.
+     Promise.race() method will return the promise instance which is firstly resolved or rejected. Let's take an example of race() method where promise2 is resolved first:
+
+var promise1 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "one");
+});
+var promise2 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then(function (value) {
+  console.log(value); // "two" // Both promises will resolve, but promise2 is faster
+});
 
 20. Every browser has a Js engine inside it so that Js code can be executed in that browser. NodeJs is a runtime environment of Js, a place where all of our program will be executed having access to file system, databases, and network attached to the server. Culmination of V8 engine and C++, due to which Js code can be executed outside of browser. Node.js has its own APIs, provided by libuv.
 
