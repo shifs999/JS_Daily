@@ -429,4 +429,17 @@ const two = generatorTwo();
 console.log(one.next().value);
 console.log(two.next().value);
 
+
+Q28: What will be the Output?
+
+const handler = {
+  set: () => console.log('Added a new property!'),
+  get: () => console.log('Accessed a property!'),
+};
+
+const person = new Proxy({}, handler);
+
+person.name = 'Spike';
+person.name;
+
 ```
