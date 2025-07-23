@@ -96,4 +96,7 @@ A27: ['a', 'b', 'c'] and a
 In generatorOne, we yield the entire array ['a', 'b', 'c'] using the yield keyword. The value of value property on the object returned by the next method on one (one.next().value) is equal to the entire array ['a', 'b', 'c'].
 In generatorTwo, we use the yield* keyword. This means that the first yielded value of two, is equal to the first yielded value in the iterator. The iterator is the array ['a', 'b', 'c']. The first yielded value is a, so the first time we call two.next().value, a is returned.
 
+A28: Added a new property! Accessed a property!
+With a Proxy object, we can add custom behavior to an object that we pass to it as the second argument. In this case, we pass the handler object which contains two properties: set and get. set gets invoked whenever we set property values, and get gets invoked whenever we get (access) property values.
+
 ```
