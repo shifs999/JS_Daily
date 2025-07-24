@@ -442,4 +442,19 @@ const person = new Proxy({}, handler);
 person.name = 'Spike';
 person.name;
 
+
+Q29: Which method(s) will return the value 'Hello world!'?
+
+const myMap = new Map();
+const myFunc = () => 'greeting';
+
+myMap.set(myFunc, 'Hello world!');
+
+//1st 
+myMap.get('greeting');
+//2nd 
+myMap.get(myFunc);
+//3rd
+myMap.get(() => 'greeting');
+
 ```
