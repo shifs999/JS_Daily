@@ -102,4 +102,7 @@ With a Proxy object, we can add custom behavior to an object that we pass to it 
 A29: 2nd 
 When adding a key/value pair using the set method, the key will be the value of the first argument passed to the set function, and the value will be the second argument passed to the set function. The key is the function () => 'greeting' in this case, and the value 'Hello world'. 
 
+A30: undefined
+When detached is called, it’s no longer bound to obj. In non-strict mode, this becomes the global object (window or global), and global.value is undefined. In strict mode, this is undefined.
+
 ```
