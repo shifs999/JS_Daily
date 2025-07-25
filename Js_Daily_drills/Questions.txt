@@ -457,4 +457,17 @@ myMap.get(myFunc);
 //3rd
 myMap.get(() => 'greeting');
 
+
+Q30: What will be the Output?
+const obj = {
+  value: 10,
+  getValue: function() {
+    return this.value;
+  },
+};
+
+const detached = obj.getValue;
+console.log(detached()); 
+
+
 ```
