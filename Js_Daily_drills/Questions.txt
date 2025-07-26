@@ -470,4 +470,20 @@ const detached = obj.getValue;
 console.log(detached()); 
 
 
+Q31: const target = {
+  message1: "hello",
+  message2: "everyone"
+};
+
+const handler = {
+  get: function(obj, prop) {
+    return prop in obj ? obj[prop] : "Property not found";
+  }
+};
+
+const proxy = new Proxy(target, handler);
+
+console.log(proxy.message1);
+console.log(proxy.message3);
+
 ```
