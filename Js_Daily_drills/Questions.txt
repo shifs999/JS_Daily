@@ -459,6 +459,7 @@ myMap.get(() => 'greeting');
 
 
 Q30: What will be the Output?
+
 const obj = {
   value: 10,
   getValue: function() {
@@ -470,7 +471,9 @@ const detached = obj.getValue;
 console.log(detached()); 
 
 
-Q31: const target = {
+Q31: What will be the Output?
+
+const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -485,5 +488,20 @@ const proxy = new Proxy(target, handler);
 
 console.log(proxy.message1);
 console.log(proxy.message3);
+
+
+Q32: What will be the Output?
+
+let target = {};
+let proxy = new Proxy(target, {
+  get(t, prop, receiver) {
+    if (prop === 'value') return 42;
+    return Reflect.get(t, prop, receiver);
+  }
+});
+
+target.value = 100;
+console.log(proxy.value);
+
 
 ```
