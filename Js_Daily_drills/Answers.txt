@@ -110,4 +110,7 @@ Property not found
 
 The get trap intercepts property access. If the property exists on the object, it returns its value; otherwise, it returns a custom fallback.
 
+A32: 42
+The get trap in the proxy intercepts access to the value property and explicitly returns 42. The assignment to target does not affect what proxy.value returns due to the custom logic in the proxy handler.
+
 ```
