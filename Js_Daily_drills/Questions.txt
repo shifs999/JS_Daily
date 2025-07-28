@@ -504,4 +504,18 @@ target.value = 100;
 console.log(proxy.value);
 
 
+Q33: What will be the Output?
+
+let x = 5;
+function outer() {
+  let x = 10;
+  return function inner() {
+    console.log(x);
+  };
+}
+
+let fn = outer();
+x = 20;
+fn();
+
 ```
