@@ -1,0 +1,26 @@
+// Js_012: Lets understand DOM and implement asynchronous web communication between a frontend HTML page and a backend API service
+
+// DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page. 
+// A web page is a document. This document can be either displayed in the browser window or as the HTML source. But it is the same document in both cases. DOM represents that same document so it can be manipulated.
+// The document keyword in JavaScript is a built in object that represents the entire HTML document loaded in the browser. It serves as the main entry point for accessing and manipulating HTML elements on a webpage. Without document, JavaScript would have no way to interact with the HTML elements on your page.
+
+<html>
+  <script>
+    async function filldiv(){
+      const a = document.getElementById('first_number').value;  // gets current internal value of input element where id = first_number
+      const b = document.getElementById('second_number').value;
+      const element = document.getElementById('finalsum')
+      const response = await fetch(`http://localhost:8080/sum?a=${a}&b=${b}`)  // fetch() is a built-in function in JavaScript that allows you to make HTTP requests to a server. It returns a Promise that resolves to the Response object representing the response to the request.
+      const ans = await response.text()  
+      document.getElementById('finalsum').innerHTML = ans // innerHTML is used to set the content of an HTML element
+      // element.innerHTML = parseInt(a) + parseInt(b)  
+    }
+  </script>
+  
+  <body>
+    <input id = "first_number" onInput = "filldiv()" type = "text" placeholder = "Enter first number"></input> <br></br>
+    <input id = "second_number" onInput = "filldiv()" type = "text" placeholder = "Enter second number"></input> <br></br>
+    <!-- <button onclick = "filldiv()">Get Sum</button> <br> </br> -->
+    <div id = "finalsum"></div>
+  </body>
+</html>
