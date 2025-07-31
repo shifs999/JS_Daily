@@ -115,4 +115,7 @@ The get trap in the proxy intercepts access to the value property and explicitly
 
 A33: 10
 
+A34: changed
+Inside mutate, obj.key = 'changed' mutates the original object. Then obj = { key: 'new object' } reassigns obj locally & doesn't affect the outer object. So, only the original mutation (key = 'changed') reflects outside.
+
 ```
