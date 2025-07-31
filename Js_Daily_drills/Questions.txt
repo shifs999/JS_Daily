@@ -518,4 +518,18 @@ let fn = outer();
 x = 20;
 fn();
 
+
+Q34: What will be the Output?
+
+function mutate(obj) {
+  obj.key = 'changed';
+  obj = { key: 'new object' };
+}
+
+const original = { key: 'initial' };
+mutate(original);
+
+console.log(original.key);
+
+
 ```
