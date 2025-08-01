@@ -118,4 +118,7 @@ A33: 10
 A34: changed
 Inside mutate, obj.key = 'changed' mutates the original object. Then obj = { key: 'new object' } reassigns obj locally & doesn't affect the outer object. So, only the original mutation (key = 'changed') reflects outside.
 
+A35: 456
+Both b and c are converted to the same string key "[object Object]", so the latter assignment overwrites the former.
+
 ```
