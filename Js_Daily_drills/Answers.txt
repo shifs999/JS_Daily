@@ -105,8 +105,7 @@ When adding a key/value pair using the set method, the key will be the value of 
 A30: undefined
 When detached is called, it’s no longer bound to obj. In non-strict mode, this becomes the global object (window or global), and global.value is undefined. In strict mode, this is undefined.
 
-A31: hello
-Property not found
+A31: hello   Property not found
 
 The get trap intercepts property access. If the property exists on the object, it returns its value; otherwise, it returns a custom fallback.
 
@@ -120,5 +119,8 @@ Inside mutate, obj.key = 'changed' mutates the original object. Then obj = { key
 
 A35: 456
 Both b and c are converted to the same string key "[object Object]", so the latter assignment overwrites the former.
+
+A36: 1  2  oops  10
+The thrown error is caught by .catch, which logs "oops" and returns 10 to the next .then
 
 ```
