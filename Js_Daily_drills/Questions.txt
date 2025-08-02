@@ -540,4 +540,14 @@ a[b] = 123;
 a[c] = 456;
 console.log(a[b]);
 
+
+Q36: What will be the Output?
+
+Promise.resolve(1)
+  .then(v => { console.log(v); return v * 2; })
+  .then(v => { console.log(v); throw new Error('oops'); })
+  .catch(err => { console.log(err.message); return 10; })
+  .then(v => console.log(v));
+
+
 ```
