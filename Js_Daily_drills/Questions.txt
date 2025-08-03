@@ -550,4 +550,17 @@ Promise.resolve(1)
   .then(v => console.log(v));
 
 
+Q37: What will be the Output?
+
+const obj = {
+  name: 'JS',
+  getName: function () {
+    return this.name;
+  }
+};
+
+const getName = obj.getName;
+console.log(getName());       
+console.log(obj.getName());   
+
 ```
