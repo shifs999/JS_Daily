@@ -123,4 +123,10 @@ Both b and c are converted to the same string key "[object Object]", so the latt
 A36: 1  2  oops  10
 The thrown error is caught by .catch, which logs "oops" and returns 10 to the next .then
 
+A37: undefined  "JS"
+getName() outside of obj loses its this binding, defaulting to global (or undefined in strict mode), obj.getName() retains the context.
+
+A38: 1
+Inside foo(), the function x() {} declaration is hoisted, so x becomes a local variable (shadowing the global x). When x = 10 runs, it assigns 10 to the local x, not the global one. 
+
 ```
