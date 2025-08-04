@@ -563,4 +563,16 @@ const getName = obj.getName;
 console.log(getName());       
 console.log(obj.getName());   
 
+
+Q38: What will be the Output?
+
+var x = 1;
+function foo() {
+  x = 10;
+  return;
+  function x() {}  
+}
+foo();
+console.log(x); 
+
 ```
