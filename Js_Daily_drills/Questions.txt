@@ -575,4 +575,16 @@ function foo() {
 foo();
 console.log(x); 
 
+
+Q39: What will be the Output?
+
+async function test(){
+  console.log(1);
+  await Promise.resolve();
+  console.log(2);
+}
+console.log(3);
+test();
+console.log(4);
+
 ```
