@@ -129,4 +129,7 @@ getName() outside of obj loses its this binding, defaulting to global (or undefi
 A38: 1
 Inside foo(), the function x() {} declaration is hoisted, so x becomes a local variable (shadowing the global x). When x = 10 runs, it assigns 10 to the local x, not the global one. 
 
+A39: 3 1 4 2
+console.log(3) runs first. test() logs 1, then await defers console.log(2) as a microtask. Meanwhile, console.log(4) runs, then finally 2 after the microtask resolves.
+
 ```
