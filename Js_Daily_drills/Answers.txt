@@ -132,4 +132,6 @@ Inside foo(), the function x() {} declaration is hoisted, so x becomes a local v
 A39: 3 1 4 2
 console.log(3) runs first. test() logs 1, then await defers console.log(2) as a microtask. Meanwhile, console.log(4) runs, then finally 2 after the microtask resolves.
 
+A40: string
+The + operator concatenates arrays by converting both operands to strings, so the result is a string, not a merged array.
 ```
