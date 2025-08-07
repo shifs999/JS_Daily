@@ -595,4 +595,14 @@ let y = [];
 let z = x + y;
 console.log(typeof z);
 
+
+Q41: What will be the Output?
+
+// Deep cloning test:
+let a = { b: { c: 4 } };
+let d = a;
+a.b.c = 5;
+console.log(a.b.c); 
+console.log(d.b.c); 
+
 ```
