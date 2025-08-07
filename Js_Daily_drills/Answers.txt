@@ -134,4 +134,8 @@ console.log(3) runs first. test() logs 1, then await defers console.log(2) as a 
 
 A40: string
 The + operator concatenates arrays by converting both operands to strings, so the result is a string, not a merged array.
+
+A41: 5  5
+Here, d points to the same object as a, so modifying a.b.c directly affects d.b.c
+
 ```
