@@ -262,6 +262,8 @@ bolt.makeSound(); // "The Dog makes a sound."
 bolt.bark(); // "Woof!"
 
 34. Symbols are unique and immutable identifiers. Symbols are often used as non-enumerable, non-colliding property keys in objects, meaning they won’t show up in for...in, Object.keys(), or JSON.stringify(), and they avoid property name collisions, which is very useful in library or framework development.
+
+35. XMLHttpRequest (XHR) and fetch() are both used for making asynchronous HTTP requests in JavaScript, but fetch() is more modern, promise-based, and offers a cleaner syntax. Unlike XHR, which uses event callbacks, fetch() supports promise chaining and better error handling with catch(). It also allows greater flexibility with headers, request bodies, and caching via the cache option. While fetch() uses an AbortController for cancelling requests, XHR has a built-in abort() method. XHR supports progress tracking, which fetch() currently lacks.
 </pre>
 </body>
 </html>
