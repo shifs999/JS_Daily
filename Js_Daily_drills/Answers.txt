@@ -138,4 +138,7 @@ The + operator concatenates arrays by converting both operands to strings, so th
 A41: 5  5
 Here, d points to the same object as a, so modifying a.b.c directly affects d.b.c
 
+A42: 2
+Method lookup is dynamic. Even though 'a' was created under the old prototype method, it still reflects changes to A.prototype.foo at the time of invocation.
+
 ```
