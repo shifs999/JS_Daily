@@ -605,4 +605,15 @@ a.b.c = 5;
 console.log(a.b.c); 
 console.log(d.b.c); 
 
+
+Q42: What will be the Output?
+
+function A() {}
+A.prototype.foo = function() { return 1; };
+
+const a = new A();
+A.prototype.foo = function() { return 2; };
+
+console.log(a.foo());
+
 ```
