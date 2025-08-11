@@ -610,10 +610,15 @@ Q42: What will be the Output?
 
 function A() {}
 A.prototype.foo = function() { return 1; };
-
 const a = new A();
 A.prototype.foo = function() { return 2; };
-
 console.log(a.foo());
+
+
+Q43: What will be the Output?
+
+const arr = [5, 2, 9];
+const comp = (a, b) => a - b;
+console.log(arr.sort(comp));
 
 ```
