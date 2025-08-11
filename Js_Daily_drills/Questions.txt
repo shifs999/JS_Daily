@@ -617,8 +617,8 @@ console.log(a.foo());
 
 Q43: What will be the Output?
 
-const arr = [5, 2, 9];
-const comp = (a, b) => a - b;
-console.log(arr.sort(comp));
+const nums = [3, 20, 100, 5, 1];
+console.log(nums.sort());           
+console.log(nums.sort((a, b) => a - b)); 
 
 ```
