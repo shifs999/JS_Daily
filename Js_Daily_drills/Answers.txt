@@ -141,4 +141,8 @@ Here, d points to the same object as a, so modifying a.b.c directly affects d.b.
 A42: 2
 Method lookup is dynamic. Even though 'a' was created under the old prototype method, it still reflects changes to A.prototype.foo at the time of invocation.
 
+A43: [1, 100, 20, 3, 5]   [1, 3, 5, 20, 100]
+By default, .sort() converts array elements to strings and compares them lexicographically ("100" comes before "20"). Using a comparator (a, b) => a - b enforces proper numeric sorting.
+
 ```
+
