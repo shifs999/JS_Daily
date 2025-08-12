@@ -144,5 +144,7 @@ Method lookup is dynamic. Even though 'a' was created under the old prototype me
 A43: [1, 100, 20, 3, 5]   [1, 3, 5, 20, 100]
 By default, .sort() converts array elements to strings and compares them lexicographically ("100" comes before "20"). Using a comparator (a, b) => a - b enforces proper numeric sorting.
 
-```
+A44: [1, 2] { value: 3, done: true }
+The spread operator only iterates yielded values, ignoring the returned value. But calling .next() directly returns the final return value with done: true.
 
+```
