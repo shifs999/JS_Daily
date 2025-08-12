@@ -621,4 +621,16 @@ const nums = [3, 20, 100, 5, 1];
 console.log(nums.sort());           
 console.log(nums.sort((a, b) => a - b)); 
 
+
+Q44: What will be the Output?
+
+function* gen() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+const it = gen();
+console.log([...it]);
+console.log(it.next());
+
 ```
