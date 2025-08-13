@@ -147,4 +147,7 @@ By default, .sort() converts array elements to strings and compares them lexicog
 A44: [1, 2] { value: 3, done: true }
 The spread operator only iterates yielded values, ignoring the returned value. But calling .next() directly returns the final return value with done: true.
 
+A45: 4
+The first increment() adds 1 (prototype-defined before override). The second uses the updated prototype method, adding 2 more totaling 4.
+
 ```
