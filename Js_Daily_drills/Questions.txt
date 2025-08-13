@@ -633,4 +633,21 @@ const it = gen();
 console.log([...it]);
 console.log(it.next());
 
+
+Q45: What will be the Output?
+
+function Counter() {
+  this.count = 1;
+}
+Counter.prototype.increment = function() {
+  this.count++;
+};
+const c = new Counter();
+c.increment();
+Counter.prototype.increment = function() {
+  this.count += 2;
+};
+c.increment();
+console.log(c.count);
+
 ```
