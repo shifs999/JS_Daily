@@ -277,6 +277,18 @@ bolt.bark(); // "Woof!"
     // Output:
     $1,000.00
     09/08/2025     // DD/MM/YYYY format
+
+37. The Temporal Dead Zone (TDZ) refers to the period between the start of a block and the point where a variable declared with let or const is initialized. During this time, the variable exists in scope but cannot be accessed, and attempting to do so results in a ReferenceError.
+This behavior is part of JavaScript's ES6 specification and applies only to variables declared with let and const, not var. Variables declared with var are hoisted and initialized with undefined, so accessing them before the declaration does not throw an error, though it can lead to unexpected results.
+Example:
+        
+    function someMethod() {
+    console.log(counter1); // Output: undefined (due to var hoisting)
+    console.log(counter2); // Throws ReferenceError (TDZ for let)
+
+    var counter1 = 1;
+    let counter2 = 2;
+}
 </pre>
 </body>
 </html>
