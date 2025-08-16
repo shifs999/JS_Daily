@@ -311,6 +311,25 @@ Object.freeze(user);
 user.employment.department = "HR";
         
 Note: It causes a TypeError if the argument passed is not an object.
+
+39. The nesting template is a feature supported within template literals syntax to allow inner backticks inside a placeholder ${ } within the template. For example, the below nesting template is used to display the icons based on user permissions whereas outer template checks for platform type,
+
+const iconStyles = `icon ${
+  isMobilePlatform()
+    ? ""
+    : `icon-${user.isAuthorized ? "submit" : "disabled"}`
+}`;
+        
+We can write the above use case without nesting template features as well. However, the nesting template feature is more compact and readable.
+
+//Without nesting templates
+const iconStyles = `icon ${
+  isMobilePlatform()
+    ? ""
+    : user.isAuthorized
+    ? "icon-submit"
+    : "icon-disabled"
+}`;
 </pre>
 </body>
 </html>
