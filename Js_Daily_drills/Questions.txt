@@ -650,4 +650,12 @@ Counter.prototype.increment = function() {
 c.increment();
 console.log(c.count);
 
+
+Q46: What will be the Output?
+
+const p1 = new Promise(r => setTimeout(() => r('one'), 500));
+const p2 = new Promise(r => setTimeout(() => r('two'), 100));
+Promise.race([p1, p2]).then(console.log);
+Promise.all([p1, p2]).then(console.log);
+
 ```
