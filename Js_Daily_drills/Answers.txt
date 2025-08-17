@@ -150,4 +150,7 @@ The spread operator only iterates yielded values, ignoring the returned value. B
 A45: 4
 The first increment() adds 1 (prototype-defined before override). The second uses the updated prototype method, adding 2 more totaling 4.
 
+A46: two  ['one','two']
+Promise.race resolves/rejects on the fastest promise, while Promise.all waits for all promises to settle, so both values return in that order.
+
 ```
