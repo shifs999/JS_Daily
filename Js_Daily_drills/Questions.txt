@@ -658,4 +658,12 @@ const p2 = new Promise(r => setTimeout(() => r('two'), 100));
 Promise.race([p1, p2]).then(console.log);
 Promise.all([p1, p2]).then(console.log);
 
+
+Q47: What will be the Output?
+
+Promise.resolve(5)
+  .then(x => x * 2)
+  .then(Promise.resolve(50))
+  .then(console.log);
+
 ```
