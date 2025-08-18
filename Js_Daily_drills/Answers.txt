@@ -153,4 +153,7 @@ The first increment() adds 1 (prototype-defined before override). The second use
 A46: two  ['one','two']
 Promise.race resolves/rejects on the fastest promise, while Promise.all waits for all promises to settle, so both values return in that order.
 
+A47: undefined
+If you pass a non-function to .then, it’s treated as .then(null) and ignored. So the chain skips the Promise.resolve(50) and logs undefined.
+
 ```
