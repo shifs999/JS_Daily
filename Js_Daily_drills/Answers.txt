@@ -156,4 +156,7 @@ Promise.race resolves/rejects on the fastest promise, while Promise.all waits fo
 A47: undefined
 If you pass a non-function to .then, it’s treated as .then(null) and ignored. So the chain skips the Promise.resolve(50) and logs undefined.
 
+A48: [3, 2, 1]
+reverse() mutates the array to [4, 3, 2, 1]; destructuring assigns a = 4, and b receives the rest: [3, 2, 1].
+
 ```
