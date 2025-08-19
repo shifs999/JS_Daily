@@ -666,4 +666,11 @@ Promise.resolve(5)
   .then(Promise.resolve(50))
   .then(console.log);
 
+
+Q48: What will be the Output?
+
+let x = [1, 2, 3, 4];
+let [a, ...b] = x.reverse();
+console.log(b);
+
 ```
