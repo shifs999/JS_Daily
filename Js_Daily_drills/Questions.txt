@@ -673,4 +673,12 @@ let x = [1, 2, 3, 4];
 let [a, ...b] = x.reverse();
 console.log(b);
 
+
+Q49: What will be the Output?
+
+let i;
+for (i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+
 ```
