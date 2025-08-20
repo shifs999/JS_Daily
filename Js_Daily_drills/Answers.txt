@@ -159,4 +159,6 @@ If you pass a non-function to .then, it’s treated as .then(null) and ignored. 
 A48: [3, 2, 1]
 reverse() mutates the array to [4, 3, 2, 1]; destructuring assigns a = 4, and b receives the rest: [3, 2, 1].
 
+A49: 3 3 3
+
 ```
