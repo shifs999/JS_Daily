@@ -681,4 +681,21 @@ for (i = 0; i < 3; i++) {
   setTimeout(() => console.log(i), 100);
 }
 
+
+Q50: What will be the Output?
+
+function add() {
+  var _args = [].slice.call(arguments);
+  var adder = function () {
+    _args.push(...arguments);
+    return adder;
+  };
+  adder.toString = function () {
+    return _args.reduce((a, b) => a + b);
+  }
+  return adder(..._args);
+}
+let a = add(1)(2)(3)(4);
+console.log(a + 10);
+
 ```
