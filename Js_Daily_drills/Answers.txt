@@ -160,5 +160,9 @@ A48: [3, 2, 1]
 reverse() mutates the array to [4, 3, 2, 1]; destructuring assigns a = 4, and b receives the rest: [3, 2, 1].
 
 A49: 3 3 3
+The closure inside each setTimeout references the same i, which becomes 3 after the loop runs, so all callbacks log 3.
+
+A50: 20
+The add function uses a closure and toString() override to accumulate arguments across chained calls, allowing numeric evaluation via coercion.
 
 ```
