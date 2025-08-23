@@ -165,4 +165,7 @@ The closure inside each setTimeout references the same i, which becomes 3 after 
 A50: 20
 The add function uses a closure and toString() override to accumulate arguments across chained calls, allowing numeric evaluation via coercion.
 
+A51: undefined
+Within the function, x is hoisted and initialized as undefined before the console log, shadowing the global x.
+
 ```
