@@ -708,4 +708,14 @@ var girl = function () {
 };
 girl();
 
+
+Q52: What will be the Output?
+
+var b = 5;
+(function foo() {
+  var b = 6;
+  console.log(b);
+})();
+console.log(b);
+
 ```
