@@ -168,4 +168,7 @@ The add function uses a closure and toString() override to accumulate arguments 
 A51: undefined
 Within the function, x is hoisted and initialized as undefined before the console log, shadowing the global x.
 
+A52: 6  5
+The IIFE creates a local scope, so b inside the function logs 6, while the outer b remains 5. 
+
 ```
