@@ -718,4 +718,16 @@ var b = 5;
 })();
 console.log(b);
 
+
+Q53: What will be the Output?
+
+let count = 0;
+function increment() {
+  if (count === 0) {
+    var count = 10;
+  }
+  console.log(count);
+}
+increment();
+
 ```
