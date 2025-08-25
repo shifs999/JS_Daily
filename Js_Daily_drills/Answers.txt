@@ -171,4 +171,7 @@ Within the function, x is hoisted and initialized as undefined before the consol
 A52: 6  5
 The IIFE creates a local scope, so b inside the function logs 6, while the outer b remains 5. 
 
+A53: undefined
+The var count inside the function is hoisted and shadows the outer count. At the point of logging, it's declared but uninitialized (undefined), so that prints.
+
 ```
