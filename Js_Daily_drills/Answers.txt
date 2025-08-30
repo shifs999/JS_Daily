@@ -174,4 +174,8 @@ The IIFE creates a local scope, so b inside the function logs 6, while the outer
 A53: undefined
 The var count inside the function is hoisted and shadows the outer count. At the point of logging, it's declared but uninitialized (undefined), so that prints.
 
+A54: [2, 3, 4]
+[1, 2, 3, 4, 5, 6]
+map() iterates based on the array length at the start (3), even though x mutates during iteration, giving y the transformed values and x extended.
+
 ```
