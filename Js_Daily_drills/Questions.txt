@@ -741,4 +741,11 @@ let y = x.map(num => {
 console.log(y);
 console.log(x);
 
+
+Q55: What will be the Output?
+
+let x = [1, 2, 3];
+let [, , y] = x;
+console.log(y);
+
 ```
