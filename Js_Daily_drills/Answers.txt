@@ -178,4 +178,7 @@ A54: [2, 3, 4]
 [1, 2, 3, 4, 5, 6]
 map() iterates based on the array length at the start (3), even though x mutates during iteration, giving y the transformed values and x extended.
 
+A55: 3
+Using commas in array destructuring lets you skip elements; here, y gets the third element.
+
 ```
