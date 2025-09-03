@@ -748,4 +748,10 @@ let x = [1, 2, 3];
 let [, , y] = x;
 console.log(y);
 
+
+Q56: What will be the Output?
+
+let arr = ["1", "2", "3"];
+console.log(arr.map(parseInt));
+
 ```
