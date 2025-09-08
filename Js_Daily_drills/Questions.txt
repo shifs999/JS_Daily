@@ -754,4 +754,16 @@ Q56: What will be the Output?
 let arr = ["1", "2", "3"];
 console.log(arr.map(parseInt));
 
+
+Q57: What will be the Output?
+
+let count = 0;
+function inc() {
+  if (count === 0) {
+    var count = 10;
+  }
+  console.log(count);
+}
+inc();
+
 ```
