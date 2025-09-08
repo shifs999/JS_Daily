@@ -184,4 +184,7 @@ Using commas in array destructuring lets you skip elements; here, y gets the thi
 A56: [1, NaN, NaN]
 map passes index to parseInt as radix, causing misinterpretation for "2" and "3". Note that parseInt ignores any third argument; map does pass the array as the 3rd arg, but it doesn’t matter here.
 
+A57: undefined
+var count is hoisted within inc, shadowing the outer variable. At the console.log, it exists but is uninitialized, thus undefined.
+
 ```
