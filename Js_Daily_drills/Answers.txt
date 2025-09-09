@@ -187,4 +187,7 @@ map passes index to parseInt as radix, causing misinterpretation for "2" and "3"
 A57: undefined
 var count is hoisted within inc, shadowing the outer variable. At the console.log, it exists but is uninitialized, thus undefined.
 
+A58: SyntaxError: Illegal break statement
+forEach() uses a callback, not a loop construct, so we can't use break within it. To stop early, a traditional for loop can be used instead.
+
 ```
