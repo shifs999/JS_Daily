@@ -766,4 +766,13 @@ function inc() {
 }
 inc();
 
+
+Q58: What will be the Output?
+
+const nums = [1, 2, 3];
+nums.forEach(n => {
+  if (n === 2) break;
+  console.log(n);
+});
+
 ```
