@@ -775,4 +775,12 @@ nums.forEach(n => {
   console.log(n);
 });
 
+
+Q59: What will be the Output?
+
+console.log([1,2,3,4,5].indexOf(2));
+console.log([{name:'John'}, {name:'John'}].indexOf({name:'John'}));
+console.log([[1],[2],[3]].indexOf([2]));
+console.log("abcdefgh".indexOf('e'));
+
 ```
