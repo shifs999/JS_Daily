@@ -190,4 +190,7 @@ var count is hoisted within inc, shadowing the outer variable. At the console.lo
 A58: SyntaxError: Illegal break statement
 forEach() uses a callback, not a loop construct, so we can't use break within it. To stop early, a traditional for loop can be used instead.
 
+A59: 1  -1  -1  4
+indexOf matches by strict reference. So arrays/objects with same content but different references return -1, while primitive string searches work by value.
+
 ```
