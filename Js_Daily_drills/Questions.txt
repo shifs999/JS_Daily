@@ -783,4 +783,11 @@ console.log([{name:'John'}, {name:'John'}].indexOf({name:'John'}));
 console.log([[1],[2],[3]].indexOf([2]));
 console.log("abcdefgh".indexOf('e'));
 
+
+Q60: What will be the Output?
+
+let arr = [ , , 3 ];  
+let res = arr.filter(n => n !== undefined);
+console.log(res, res.length);
+
 ```
