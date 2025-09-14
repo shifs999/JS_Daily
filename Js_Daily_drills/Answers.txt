@@ -193,4 +193,7 @@ forEach() uses a callback, not a loop construct, so we can't use break within it
 A59: 1  -1  -1  4
 indexOf matches by strict reference. So arrays/objects with same content but different references return -1, while primitive string searches work by value.
 
+A60: [3] 1
+Empty slots are treated as missing elements (not undefined), filter sees only the slot with 3, so result has one element.
+
 ```
