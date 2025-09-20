@@ -790,4 +790,11 @@ let arr = [ , , 3 ];
 let res = arr.filter(n => n !== undefined);
 console.log(res, res.length);
 
+
+Q61: What will be the Output?
+
+const x = [null, 0, "0", false, "a"];
+const y = x.filter(v => v);
+console.log(y);
+
 ```
