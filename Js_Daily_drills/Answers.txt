@@ -196,4 +196,7 @@ indexOf matches by strict reference. So arrays/objects with same content but dif
 A60: [3] 1
 Empty slots are treated as missing elements (not undefined), filter sees only the slot with 3, so result has one element.
 
+A61: ["0", "a"]
+filter keeps truthy values; "0" (non empty string) is truthy but 0, null, false are falsy. So only "0" and "a" survive.
+
 ```
