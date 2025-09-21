@@ -199,4 +199,7 @@ Empty slots are treated as missing elements (not undefined), filter sees only th
 A61: ["0", "a"]
 filter keeps truthy values; "0" (non empty string) is truthy but 0, null, false are falsy. So only "0" and "a" survive.
 
+A62: [1]
+Spread collects only yielded values. return 2 is ignored by iteration.
+
 ```
