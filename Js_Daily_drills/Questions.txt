@@ -797,4 +797,15 @@ const x = [null, 0, "0", false, "a"];
 const y = x.filter(v => v);
 console.log(y);
 
+
+Q62: What will be the Output?
+
+function* g() {
+  yield 1;
+  return 2;
+  yield 3;
+}
+const it = g();
+console.log([...it]);
+
 ```
